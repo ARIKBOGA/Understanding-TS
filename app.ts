@@ -1,3 +1,6 @@
+type Combinable = number | string;
+type ConversionDescriptor = "as-number" | "as-text";
+
 /**
  * Combines two values of type number or string into a single value.
  * If both values are numbers, the result is the sum of the two numbers.
@@ -6,9 +9,16 @@
  * @param {number|string} arg2 The second value to combine.
  * @returns {number|string} The combined value.
  */
-function combine(arg1: number | string, arg2: number | string, resultConversion: "as-number" | "as-text"): number | string {
+function combine(
+  arg1: Combinable,
+  arg2: Combinable,
+  resultConversion: ConversionDescriptor
+): Combinable {
   let result: any;
-  if (typeof arg1 === "number" && typeof arg2 === "number" || resultConversion === 'as-number') {
+  if (
+    (typeof arg1 === "number" && typeof arg2 === "number") ||
+    resultConversion === "as-number"
+  ) {
     result = +arg1 + +arg2;
   } else {
     result = arg1.toString() + arg2.toString();
