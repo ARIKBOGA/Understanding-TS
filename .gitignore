@@ -1,0 +1,60 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript build outputs
+dist/
+build/
+out/
+
+# Compiled JavaScript files
+*.js
+*.js.map
+*.d.ts
+
+# Environment variables and configurations
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# ESLint cache
+.eslintcache
+
+# Parcel cache
+.cache/
+
+# Storybook files
+storybook-static/
+
+# Build and package files
+*.tgz
+*.tar.gz
+
+# Lock files (optional, if you don't want them in version control)
+package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
